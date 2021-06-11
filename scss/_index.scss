@@ -1,0 +1,31 @@
+*{
+  font-family: 'Noto Sans TC', sans-serif;
+  list-style: none;
+}
+// 元件 樣式
+.fm--number{
+  font-family: 'Baloo Tamma 2', cursive;
+}
+.button--primary{
+  font-weight: bold;
+  color: #636057;
+  &:hover{
+    color:#ffffff;
+    background-color:#ff785e;
+  }
+}
+.button--secondary{
+  font-weight: bold;
+  &:hover{
+    color: #858377;
+    background-color:#ffdf65;
+    border-color:#ffdf65;
+    & i{
+      color:#ff785e;
+    }
+  }
+}
+// 區域 樣式
+.product__img{
+  border-radius:35px;
+}

@@ -26,6 +26,34 @@
   }
 }
 // 區域 樣式
-.product__img{
-  border-radius:35px;
+.login__progress--height{
+  height: 1px;
+}
+.product{
+  &__img{
+    border-radius:35px;
+  }
+  &__progress--width{
+    width: 41%
+  }
+}
+.main__nav>.nav-item .nav-link.active{
+  font-weight: bold;
+  border-bottom: 2px solid #ffdf65;
+  padding-bottom: 16px;
+}
+.faq__button.collapsed>i{
+  transform: rotate(-180deg);
+}
+.sponsor__progress--height{
+  height: 3px;
+}
+.aside{
+  &__icon{
+    width: 30px;
+    height: 30px;
+  }
+  &__scroll--vh{
+    height: 90vh;
+  }
 }

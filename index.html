@@ -708,13 +708,15 @@
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
     crossorigin="anonymous"></script>
   <script>
-    // 參考：https://hackmd.io/PboDQ9ZZSvy8IuGemyw35Q
-    // enable tooltips
+
+    // tooltips initialization
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
       return new bootstrap.Tooltip(tooltipTriggerEl)
     })
 
+    
+    // 參考：https://hackmd.io/PboDQ9ZZSvy8IuGemyw35Q
     // click nav&tab go there & click go to #sponsor
     var sponsor = document.getElementById("sponsor");
     function heightToTop(ele) {

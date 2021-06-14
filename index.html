@@ -22,8 +22,8 @@
 
 <body>
   <!--  -->
-  <div class="border-bottom border-warning border-3">
-    <nav class="navbar navbar-expand-lg navbar-light container">
+  <div class="border-bottom border-warning border-3  bg-white sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light container my-0 py-0">
       <div class="container-fluid">
         <!-- logo -->
         <a class="navbar-brand" href="#"><img class="d-inline-block align-text-top"
@@ -46,58 +46,57 @@
             </li>
           </ul>
           <!--    導覽列按鈕    -->
-          <form class="d-flex mt-4 mt-lg-0">
-            <button class="btn btn-warning rounded-pill px-4 me-4 button--primary" data-bs-toggle="modal"
+          <form class="d-flex mt-4 mt-lg-0 pb-2">
+            <button class="btn btn-warning rounded-pill px-4 me-4 button--primary " data-bs-toggle="modal"
               data-bs-target="#login" type="button">登入</button>
             <button class="btn btn-outline-secondary rounded-pill px-4 me-4 button--secondary">註冊</button>
-
-            <!--    Modal 互動視窗      -->
-            <div class="modal fade" id="login" data-bs-backdrop="static">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content border-bottom-0 border-start-0 border-end-0 border-4 border-warning">
-
-                  <div class="modal-header">
-                    <div class="modal-title fs-4 fw-bold">登入</div>
-                    <div class="btn-close" data-bs-dismiss="modal"></div>
-                  </div>
-
-                  <div class="modal-body">
-                    <form>
-                      <div class="mb-3">
-                        <label for="account" class="col-form-label">帳號</label>
-                        <input type="email" class="form-control bg-light border-0" id="account">
-                      </div>
-                      <div class=" mb-3">
-                        <label for="password" class="col-form-label">密碼</label>
-                        <input type="password" class="form-control mb-2 bg-light border-0" id="password">
-                        <a href="#" class="tooltip-test text-decoration-none text-secondary" title="忘記密碼了嗎???">忘記密碼?</a>
-                      </div>
-                    </form>
-
-                    <button class="btn btn-warning rounded-pill w-100 button--primary fs-5 mb-4"
-                      type="button">登入</button>
-
-                    <div class="position-relative m-4">
-                      <div class="progress login__progress--height">
-                        <div class="progress-bar" role="progressbar"></div>
-                      </div>
-
-                      <small class="position-absolute top-0 start-50 translate-middle bg-white px-2">
-                        還沒有帳號?
-                        <a href="#" class="text-decoration-none text-danger">註冊一個帳號</a>
-                      </small>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
           </form>
         </div>
       </div>
     </nav>
   </div>
+  <!--    Modal 互動視窗      -->
+  <div class="modal fade" id="login" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-bottom-0 border-start-0 border-end-0 border-4 border-warning">
+
+        <div class="modal-header">
+          <div class="modal-title fs-4 fw-bold">登入</div>
+          <div class="btn-close" data-bs-dismiss="modal"></div>
+        </div>
+
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="account" class="col-form-label">帳號</label>
+              <input type="email" class="form-control bg-light border-0" id="account">
+            </div>
+            <div class=" mb-3">
+              <label for="password" class="col-form-label">密碼</label>
+              <input type="password" class="form-control mb-2 bg-light border-0" id="password">
+              <a href="#" class="tooltip-test text-decoration-none text-secondary" title="忘記密碼了嗎???">忘記密碼?</a>
+            </div>
+          </form>
+
+          <button class="btn btn-warning rounded-pill w-100 button--primary fs-5 mb-4" type="button">登入</button>
+
+          <div class="position-relative m-4">
+            <div class="progress login__progress--height">
+              <div class="progress-bar" role="progressbar"></div>
+            </div>
+
+            <small class="position-absolute top-0 start-50 translate-middle bg-white px-2">
+              還沒有帳號?
+              <a href="#" class="text-decoration-none text-danger">註冊一個帳號</a>
+            </small>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
   <!--  -->
+
   <div class="bg-light pb-5">
     <div class="container">
       <span class="badge bg-secondary mt-5">魔法科技</span>

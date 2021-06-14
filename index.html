@@ -36,13 +36,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item mx-lg-4">
-              <a class="nav-link active" href="#">關於</a>
+              <a class="nav-link active" href="#" onclick="goToTab()">關於</a>
             </li>
             <li class="nav-item mx-lg-4">
-              <a class="nav-link" href="#">挖寶</a>
+              <a class="nav-link" href="#" onclick="goToTab()">挖寶</a>
             </li>
             <li class="nav-item mx-lg-4">
-              <a class="nav-link" href="#">我有個大膽的想法</a>
+              <a class="nav-link" href="#" onclick="goToTab()">我有個大膽的想法</a>
             </li>
           </ul>
           <!--    導覽列按鈕    -->
@@ -694,8 +694,8 @@
     拼拼 All
     rights reserved.</footer>
   <!--  -->
-  <a type="button" class="btn btn-warning button--primary rounded-0 border-0 fixed-bottom w-100 d-lg-none"
-    href="#sponsor">贊助專案</a>
+  <a id="bottomBtn" onclick="goForm()" type="button"
+    class="btn btn-warning button--primary rounded-0 border-0 fixed-bottom w-100 d-lg-none" href="#sponsor">贊助專案</a>
 
 
 
@@ -704,9 +704,62 @@
   <!--  -->
 
   <!-- Bootstrap5 JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
     crossorigin="anonymous"></script>
+  <script>
+    // 參考：https://hackmd.io/PboDQ9ZZSvy8IuGemyw35Q
+    // enable tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+    // click nav&tab go there & click go to #sponsor
+    var sponsor = document.getElementById("sponsor");
+    function heightToTop(ele) {
+      let bridge = ele;
+      let root = document.body;
+      let height = 0;
+      do {
+        height += bridge.offsetTop;
+        bridge = bridge.offsetParent;
+      } while (bridge !== root);
+
+      return height;
+    }
+    function goToTab() {
+      window.scrollTo({
+        top: heightToTop(document.getElementsByClassName("tab-content")[0]) - 70,
+        behavior: "smooth",
+      });
+    }
+    function goSponsor() {
+      window.scrollTo({
+        top: heightToTop(sponsor) - 170,
+        behavior: "smooth",
+      });
+    }
+
+    // mobile btn toggle
+    var bottomBtn = document.getElementById("bottomBtn");
+    bottomBtn.style.display = "none";
+    window.onscroll = function () {
+      const t = document.documentElement.scrollTop || document.body.scrollTop;
+      if (bottomBtn !== null) {
+        if (
+          t >
+          heightToTop(document.getElementsByClassName("tab-content")[0]) - 100 &&
+          t < heightToTop(sponsor)
+        ) {
+          bottomBtn.style.display = "block";
+        } else {
+          bottomBtn.style.display = "none";
+        }
+      }
+    };
+
+  </script>
 </body>
 
 </html>

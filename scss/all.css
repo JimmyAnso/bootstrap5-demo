@@ -11909,7 +11909,12 @@ fieldset:disabled .btn {
   height: 30px;
 }
 
-.aside__scroll--vh {
+.aside__scroll--sticky {
   height: 90vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 80px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 /*# sourceMappingURL=all.css.map */
